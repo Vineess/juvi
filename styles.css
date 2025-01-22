@@ -278,3 +278,36 @@ nav {
 .menu a:hover {
     color: #fad0c4;
 }
+
+#roletaWheelContainer {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#roletaResult {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff7f7f;
+    text-align: center;
+}
+
+
+
+.translations {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.translations p {
+    margin: 5px 0;
+}
