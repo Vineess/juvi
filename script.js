@@ -73,8 +73,9 @@ document
     document.body.appendChild(backButton);
   });
 
-// Função para adicionar um novo próximo date no Firebase
-document
+
+  
+  document
   .getElementById("nextDateForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
@@ -91,6 +92,7 @@ document
       location: location,
       description: description,
       suggestedBy: suggestedBy,
+      timestamp: new Date().getTime() // Adicionando o timestamp para ordenar mais facilmente
     });
 
     // Limpa o formulário
@@ -109,20 +111,28 @@ function displayNextDates() {
       const dates = snapshot.val();
       let datesList = "";
 
+      // Transformar o objeto em um array de dates
+      const datesArray = Object.keys(dates).map((key) => ({
+        id: key,
+        ...dates[key],
+      }));
+
+      // Ordenar os dates do mais recente para o mais antigo (baseado no timestamp)
+      datesArray.sort((a, b) => b.timestamp - a.timestamp); // Ordenação decrescente
+
       // Loop para exibir cada próximo date
-      for (const key in dates) {
-        const date = dates[key];
+      datesArray.forEach((date) => {
         datesList += `
-        <li class="next-date-card">
-            <div class="date-info">
-                <strong class="date">${date.date}</strong><br>
-                <em class="location"><strong>Local:</strong>${date.location}</em><br>
-                <p class="description"><strong>Descição:</strong>${date.description}</p>
-                <p class="suggested-by"><strong>Sugestão de:</strong> ${date.suggestedBy}</p>
-            </div>
-        </li>
-    `;
-      }
+          <li class="next-date-card">
+              <div class="date-info">
+                  <strong class="date">${date.date}</strong><br>
+                  <em class="location"><strong>Local:</strong> ${date.location}</em><br>
+                  <p class="description"><strong>Descrição:</strong> ${date.description}</p>
+                  <p class="suggested-by"><strong>Sugestão de:</strong> ${date.suggestedBy}</p>
+              </div>
+          </li>
+        `;
+      });
 
       document.getElementById("nextDateList").innerHTML = datesList;
     } else {
@@ -131,6 +141,7 @@ function displayNextDates() {
     }
   });
 }
+
 
 // Chama a função para carregar os dados quando a página carregar
 window.onload = displayNextDates;
