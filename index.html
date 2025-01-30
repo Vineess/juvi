@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para o amor da minha Vida S2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <nav>
         <ul class="menu">
             <li><a href="#" id="playlistBtn">Playlist do Amor</a></li>
-            <li><a href="#" id="questionsBtn">Jogo de Perguntas</a></li>
             <li><a href="#" id="nextDateBtn">Próximos Dates</a></li>
             <li><a href="#" id="loveThingsBtn">Coisas que amo em Você</a></li>
         </ul>
@@ -22,7 +23,7 @@
     <h1>Conheci o Amor da Minha Vida a:</h1>
     <div id="counter">Carregando...</div>
 
-    
+
     <a href="#" class="button" id="specialDateBtn">Voltar no Tempo</a>
     <div id="specialDateMessage" style="display: none;">
         <p>Foi em 25 de Dezempro de 2024, que a magia começou. 💖</p>
@@ -43,10 +44,41 @@
             <button id="nextLove">&gt;</button>
         </div>
     </section>
-    
-    <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/album/2bONlXOPI96yOZRIbSPpZT" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999;"></iframe>
 
-    <script src="script.js"></script>
-    
+    <section id="nextDatesSection" style="display: none;">
+        <h2>Adicione um Próximo Date</h2>
+        <form id="nextDateForm">
+            <label for="suggestedBy">Sugestão de:</label>
+            <select id="suggestedBy" required>
+                <option value="julia">Julia</option>
+                <option value="vinicius">Vinicius</option>
+            </select>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" required>
+
+            <label for="location">Local:</label>
+            <input type="text" id="location" required>
+
+            <label for="description">Descrição:</label>
+            <textarea id="description" rows="4" required></textarea>
+
+            <button type="submit">Adicionar Date</button>
+        </form>
+
+        <h3>Sugestão de Dates</h3>
+        <ul id="nextDateList">
+
+        </ul>
+    </section>
+
+
+    <iframe id="spotifyPlayer" src="https://open.spotify.com/embed/album/2bONlXOPI96yOZRIbSPpZT" width="300"
+        height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"
+        style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 999;"></iframe>
+
+    <script src="script.js" type="module"></script>
+
 </body>
+
 </html>

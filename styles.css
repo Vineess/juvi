@@ -308,3 +308,151 @@ nav {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+#nextDateForm {
+    background-color: #ffffff;
+    padding: 30px;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+#nextDateForm label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+#nextDateForm input, 
+#nextDateForm textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+#nextDateForm input:focus, 
+#nextDateForm textarea:focus {
+    outline: none;
+    border-color: #e91e63;
+}
+
+#nextDateForm button {
+    background-color: #e91e63;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#nextDateForm button:hover {
+    background-color: #d81b60;
+}
+
+/* Estilo da lista de "Próximos Dates" */
+#nextDateList {
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#nextDateList li {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#nextDateList li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#nextDateList li strong {
+    font-size: 22px;
+    color: #e91e63;
+}
+
+#nextDateList li em {
+    display: block;
+    font-size: 18px;
+    color: #000000;
+    margin-top: 5px;
+}
+
+#nextDateList li p {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+/* Estilo para o card de próximo date */
+.next-date-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.next-date-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do texto dentro do card */
+.date-info {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 1.5em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 1.2em;
+    color: #3498db;
+    font-style: italic;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: normal;   /* Permite quebra de linha normal */
+    overflow-wrap: break-word; /* Suporte para navegadores mais antigos */
+    max-height: 100px;  /* Limita a altura da descrição */
+    overflow-y: auto;  /* Impede que o texto extra ultrapasse a altura */
+    text-overflow: ellipsis; /* Exibe "..." caso o texto seja cortado */
+  }
+
+.suggested-by {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #2ecc71;
+}
+
+.suggested-by strong {
+    color: #27ae60;
+}
+ 
