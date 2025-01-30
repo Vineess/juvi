@@ -165,4 +165,29 @@ function closeModal() {
     document.body.style.overflow = 'auto'; // Habilita a rolagem do body novamente
 }
 
+document.getElementById("loveThingsBtn").addEventListener("click", function() {
+    const section = document.getElementById("loveThingsSection");
+    section.style.display = section.style.display === "block" ? "none" : "block";
+});
 
+
+const loveTexts = [
+    "Seu sorriso ilumina meu dia. 😊",
+    "O jeito que você me olha me faz sentir especial. 💖",
+    "Seu abraço é meu lugar favorito. 🤗",
+    "A forma como você se preocupa comigo me faz te amar mais. 🥰",
+    "Seu cheiro é o melhor perfume do mundo. 😍",
+];
+
+let loveIndex = 0;
+const loveTextElement = document.getElementById("loveText");
+
+document.getElementById("prevLove").addEventListener("click", function() {
+    loveIndex = (loveIndex - 1 + loveTexts.length) % loveTexts.length;
+    loveTextElement.textContent = loveTexts[loveIndex];
+});
+
+document.getElementById("nextLove").addEventListener("click", function() {
+    loveIndex = (loveIndex + 1) % loveTexts.length;
+    loveTextElement.textContent = loveTexts[loveIndex];
+});
