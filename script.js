@@ -191,3 +191,19 @@ document.getElementById("nextLove").addEventListener("click", function() {
     loveIndex = (loveIndex + 1) % loveTexts.length;
     loveTextElement.textContent = loveTexts[loveIndex];
 });
+
+// Pega o botão de Playlist do Amor e o player
+const playlistBtn = document.getElementById('playlistBtn');
+const spotifyPlayer = document.getElementById('spotifyPlayer');
+
+// Função para alternar o estado do player (mostrar/ocultar)
+playlistBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão do link
+
+    // Alterna entre exibir ou ocultar o player
+    if (spotifyPlayer.style.display === 'none' || spotifyPlayer.style.display === '') {
+        spotifyPlayer.style.display = 'block'; // Exibe o player
+    } else {
+        spotifyPlayer.style.display = 'none'; // Oculta o player
+    }
+});
