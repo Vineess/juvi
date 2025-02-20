@@ -147,7 +147,7 @@ function displayNextDates() {
 window.onload = displayNextDates;
 
 function updateCounter() {
-  const startDate = new Date("2024-12-25T00:35:27"); // Data inicial
+  const startDate = new Date("2025-02-13T19:39:27"); // Data inicial
   const now = new Date(); // Data atual
 
   let years = now.getFullYear() - startDate.getFullYear();
