@@ -204,9 +204,9 @@ document.getElementById("letterBtn").onclick = function () {
   // Limpar o conteúdo do modal antes de iniciar a animação
   messageText.innerHTML = ""; // Limpa tudo o que está dentro do modal
 
-  // Texto com 20 linhas, incluindo "Para Julia!" e a assinatura final
+  // Texto com 20 linhas, incluindo "Para Maria!" e a assinatura final
   const textLines = [
-    "Para Julia!", // Primeira linha centralizada com o nome dela
+    "Para Alguém!", // Primeira linha centralizada com o nome dela
     "Cada momento que passamos juntos tem sido uma verdadeira descoberta.",
     "A forma como você ilumina o ambiente com seu sorriso me deixa sem palavras.",
     "É impressionante como, a cada conversa, você me surpreende mais e mais.",
