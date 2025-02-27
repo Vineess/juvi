@@ -206,7 +206,7 @@ document.getElementById("letterBtn").onclick = function () {
 
   // Texto com 20 linhas, incluindo "Para Maria!" e a assinatura final
   const textLines = [
-    "Para Alguém!", // Primeira linha centralizada com o nome dela
+    "Para Maria!", // Primeira linha centralizada com o nome dela
     "Cada momento que passamos juntos tem sido uma verdadeira descoberta.",
     "A forma como você ilumina o ambiente com seu sorriso me deixa sem palavras.",
     "É impressionante como, a cada conversa, você me surpreende mais e mais.",
